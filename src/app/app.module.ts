@@ -26,7 +26,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     ProgramFinderComponent,
     UserProfileComponent,
     ApplicatoinTrackerComponent,
-    UserProgramsComponent
+    UserProgramsComponent,
     UserComponent
   ],
   imports: [
