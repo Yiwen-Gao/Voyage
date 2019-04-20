@@ -36,7 +36,9 @@ export class ApplicatoinTrackerComponent implements OnInit {
 
   username: string;
 
-  applications = APPLICATIONS;
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  dataSource = APPLICATIONS;
+
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
