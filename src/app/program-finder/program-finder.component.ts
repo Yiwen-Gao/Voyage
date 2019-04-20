@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ENTER, COMMA} from '@angular/cdk/keycodes';
-
-const PROGRAM_DATA = [
-  {program: 'CS Masters', university: 'Columbia'},
-  {program: 'CS phD', university: 'MIT'},
-  {program: 'CS MPhil', university: 'UCLA'}
-];
+import PROGRAM_DATA from '../data/programData.json';
 
 @Component({
   selector: 'app-program-finder',
