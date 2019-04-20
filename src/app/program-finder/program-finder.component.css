@@ -1,0 +1,17 @@
+#welcome-message, #search {
+  text-align: center;
+}
+
+#program-finder-container {
+  width: 75%;
+  margin: auto;
+}
+
+#search-bar {
+  width: 250px;
+  margin: auto;
+}
+
+#results {
+  width: 100%;
+}

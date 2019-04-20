@@ -12,6 +12,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { UserProgramsComponent } from './user-programs/user-programs.component';
+import { UserComponent } from './user/user.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatTabsModule } from '@angular/material/tabs';
+
 
 @NgModule({
   declarations: [
@@ -20,22 +27,24 @@ import { UserProgramsComponent } from './user-programs/user-programs.component';
     UserProfileComponent,
     ApplicatoinTrackerComponent,
     UserProgramsComponent
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
       { path: '', component: ProgramFinderComponent },
-      { path: 'user-profile/:username', component: UserProfileComponent },
-      {
-        path: 'application-tracker/:username',
-        component: ApplicatoinTrackerComponent
-      }
+      { path: 'user/:username', component: UserComponent }
     ]),
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatTableModule,
+    MatChipsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
