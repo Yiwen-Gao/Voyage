@@ -1,1 +1,33 @@
-<p>user-profile works! user: {{ username }}</p>
+<mat-drawer-container class="container">
+  <mat-drawer mode="side" opened>
+    <mat-button-toggle-group #group="matButtonToggleGroup">
+      <mat-button-toggle value="personal">
+        <a>Personal Infomation</a>
+      </mat-button-toggle>
+      <mat-button-toggle value="education">
+        <a>Education</a>
+      </mat-button-toggle>
+      <mat-button-toggle value="scores">
+        <a>Test Scores</a>
+      </mat-button-toggle>
+      <mat-button-toggle value="documents">
+        <a>Transcripts</a>
+      </mat-button-toggle>
+      <mat-button-toggle value="documents">
+        <a>Required Documents</a>
+      </mat-button-toggle>
+      <mat-button-toggle value="experience">
+        <a>Experiences</a>
+      </mat-button-toggle>
+      <mat-button-toggle value="recommend">
+        <a>Recommendation Letter</a>
+      </mat-button-toggle>
+      <mat-button-toggle value="fee">
+        <a>Application Fee</a>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </mat-drawer>
+  <mat-drawer-content>Main content</mat-drawer-content>
+</mat-drawer-container>
+
+<div class="example-selected-value">Selected value: {{ group.value }}</div>
