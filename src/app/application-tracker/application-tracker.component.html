@@ -3,27 +3,18 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Country</th>
-      <th scope="col">Area</th>
-      <th scope="col">Population</th>
+      <th scope="col">ID</th>
+      <th scope="col">University</th>
+      <th scope="col">Major</th>
+      <th scope="col">Link</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let country of countries; index as i">
+    <tr *ngFor="let application of applications; index as i">
       <th scope="row">{{ i + 1 }}</th>
-      <td>
-        <img
-          [src]="
-            'https://upload.wikimedia.org/wikipedia/commons/' + country.flag
-          "
-          class="mr-2"
-          style="width: 20px"
-        />
-        {{ country.name }}
-      </td>
-      <td>{{ country.area | number }}</td>
-      <td>{{ country.population | number }}</td>
+      <td>{{ application.university }} </td>
+      <td>{{ application.program }}</td>
+      <td>{{ application.deadline }}</td>
     </tr>
   </tbody>
 </table>
