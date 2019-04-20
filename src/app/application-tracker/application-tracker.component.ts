@@ -4,25 +4,28 @@ import { ActivatedRoute } from '@angular/router';
 interface Applications {
   university: string;
   program: string;
-  track: string;
   deadline: string;
   website: string;
+  completion: string;
+  missing: string;
 }
 
 const APPLICATIONS: Applications[] = [
   {
     university: 'Columbia',
-    program: 'Computer Science MS',
-    track: 'computer architecture',
+    program: 'CS MS',
     deadline: 'Dec 15',
-    website: 'http://www.cs.columbia.edu/education/admissions/#masters'
+    website: 'http://www.cs.columbia.edu/education/admissions/#masters',
+    completion: '70%',
+    missing: 'CV, GRE Grade'
   },
   {
     university: 'MIT',
-    program: 'Computer Science MS',
-    track: 'Computer Vision',
+    program: 'CS MS',
     deadline: 'Dec 15',
-    website: 'https://www.eecs.mit.edu/academics-admissions/graduate-program'
+    website: 'https://www.eecs.mit.edu/academics-admissions/graduate-program',
+    completion: '60%',
+    missing: 'Recommandation Letter'
   }
 ];
 
@@ -36,7 +39,9 @@ export class ApplicatoinTrackerComponent implements OnInit {
 
   username: string;
 
-  applications = APPLICATIONS;
+  displayedColumns: string[] = ['university', 'program', 'deadline', 'completion', 'missing'];
+  dataSource = APPLICATIONS;
+
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
