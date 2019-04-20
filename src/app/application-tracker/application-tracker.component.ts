@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-program-tracker',
-  templateUrl: './program-tracker.component.html',
-  styleUrls: ['./program-tracker.component.css']
+  selector: 'app-application-tracker',
+  templateUrl: './application-tracker.component.html',
+  styleUrls: ['./application-tracker.component.css']
 })
-export class ProgramTrackerComponent implements OnInit {
+export class ApplicatoinTrackerComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   username: string;

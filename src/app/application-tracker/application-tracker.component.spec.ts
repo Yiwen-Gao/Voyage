@@ -1,20 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProgramTrackerComponent } from './program-tracker.component';
+import { ApplicatoinTrackerComponent } from './application-tracker.component';
 
 describe('ProgramTrackerComponent', () => {
-  let component: ProgramTrackerComponent;
-  let fixture: ComponentFixture<ProgramTrackerComponent>;
+  let component: ApplicatoinTrackerComponent;
+  let fixture: ComponentFixture<ApplicatoinTrackerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProgramTrackerComponent ]
-    })
-    .compileComponents();
+      declarations: [ApplicatoinTrackerComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProgramTrackerComponent);
+    fixture = TestBed.createComponent(ApplicatoinTrackerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
