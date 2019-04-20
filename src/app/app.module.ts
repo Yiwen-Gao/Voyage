@@ -11,28 +11,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { UserComponent } from './user/user.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatTabsModule } from '@angular/material/tabs';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ProgramFinderComponent,
     UserProfileComponent,
-    ApplicatoinTrackerComponent
+    ApplicatoinTrackerComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
       { path: '', component: ProgramFinderComponent },
-      { path: 'user-profile/:username', component: UserProfileComponent },
-      {
-        path: 'application-tracker/:username',
-        component: ApplicatoinTrackerComponent
-      }
+      { path: 'user/:username', component: UserComponent }
     ]),
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -41,7 +41,8 @@ import { MatChipsModule } from '@angular/material/chips';
     MatIconModule,
     MatInputModule,
     MatTableModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

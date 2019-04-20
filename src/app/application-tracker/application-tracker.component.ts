@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 interface Applications {
-    university: string,
-    program: string,
-    track: string,
-    deadline: string,
-    website: string,
+  university: string;
+  program: string;
+  track: string;
+  deadline: string;
+  website: string;
 }
 
 const APPLICATIONS: Applications[] = [
@@ -23,7 +23,7 @@ const APPLICATIONS: Applications[] = [
     track: 'Computer Vision',
     deadline: 'Dec 15',
     website: 'https://www.eecs.mit.edu/academics-admissions/graduate-program'
-  },
+  }
 ];
 
 @Component({
