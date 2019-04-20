@@ -1,1 +1,20 @@
 <p>application-tracker works! user: {{ username }}</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">University</th>
+      <th scope="col">Major</th>
+      <th scope="col">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let application of applications; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ application.university }} </td>
+      <td>{{ application.program }}</td>
+      <td>{{ application.deadline }}</td>
+    </tr>
+  </tbody>
+</table>
