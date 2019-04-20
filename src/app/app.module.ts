@@ -15,7 +15,9 @@ import { UserComponent } from './user/user.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatTabsModule } from '@angular/material/tabs';
+
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatIconModule,
     MatInputModule,
     MatTableModule,
+    MatChipsModule,
     MatTabsModule
   ],
   providers: [],
