@@ -12,6 +12,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { UserComponent } from './user/user.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
@@ -33,6 +36,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatToolbarModule,
     MatMenuModule,
     MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatTableModule,
     MatTabsModule
   ],
   providers: [],
