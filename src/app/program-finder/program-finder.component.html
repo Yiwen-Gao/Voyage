@@ -5,7 +5,18 @@
 <div id="program-finder-container">
   <div id="search">
     <mat-form-field id="search-bar">
-      <input matInput placeholder="Find your dream program...">
+      <mat-chip-list #filterChips>
+        <mat-chip *ngFor="let filter of filters" (removed)="remove(filter)">
+          {{filter}}
+          <mat-icon matChipRemove>cancel</mat-icon>
+        </mat-chip>
+        <input
+          matInput
+          placeholder="Find your dream program..."
+          [matChipInputFor]="filterChips"
+          [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+          (matChipInputTokenEnd)="add($event)">
+      </mat-chip-list>
     </mat-form-field>
     <button mat-button>
       <i class="material-icons">search</i>
