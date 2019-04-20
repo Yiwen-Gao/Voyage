@@ -9,22 +9,13 @@
         </button></span
       >
       <span>
-        <!-- <a [routerLink]="['application-tracker', username]">{{ username }}</a> -->
-
-        <button mat-button class="toolbar-btn" [matMenuTriggerFor]="menu">
+        <button
+          mat-button
+          class="toolbar-btn"
+          [routerLink]="['user', username]"
+        >
           {{ username }}
         </button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item [routerLink]="['user-profile', username]">
-            Profile
-          </button>
-          <button
-            mat-menu-item
-            [routerLink]="['application-tracker', username]"
-          >
-            Track your applications
-          </button>
-        </mat-menu>
       </span>
     </p>
   </mat-toolbar-row>
