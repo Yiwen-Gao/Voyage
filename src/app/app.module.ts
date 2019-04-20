@@ -6,17 +6,18 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { ProgramFinderComponent } from './program-finder/program-finder.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { ProgramTrackerComponent } from './program-tracker/program-tracker.component';
+import { ApplicatoinTrackerComponent } from './application-tracker/application-tracker.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProgramFinderComponent,
     UserProfileComponent,
-    ProgramTrackerComponent
+    ApplicatoinTrackerComponent
   ],
   imports: [
     BrowserModule,
@@ -24,11 +25,15 @@ import { MatMenuModule } from '@angular/material/menu';
     RouterModule.forRoot([
       { path: '', component: ProgramFinderComponent },
       { path: 'user-profile/:username', component: UserProfileComponent },
-      { path: 'program-tracker/:username', component: ProgramTrackerComponent }
+      {
+        path: 'application-tracker/:username',
+        component: ApplicatoinTrackerComponent
+      }
     ]),
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

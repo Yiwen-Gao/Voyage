@@ -2,17 +2,26 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row style="justify-content: space-between">
     <span class="logo">Voyage</span>
-    <p class="toolbar">
-      <span><a routerLink="">Program Finder</a></span>
+    <p>
+      <span
+        ><button mat-button class="toolbar-btn" routerLink="">
+          Program Finder
+        </button></span
+      >
       <span>
-        <!-- <a [routerLink]="['program-tracker', username]">{{ username }}</a> -->
+        <!-- <a [routerLink]="['application-tracker', username]">{{ username }}</a> -->
 
-        <button mat-button [matMenuTriggerFor]="menu">{{ username }}</button>
+        <button mat-button class="toolbar-btn" [matMenuTriggerFor]="menu">
+          {{ username }}
+        </button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item [routerLink]="['user-profile', username]">
             Profile
           </button>
-          <button mat-menu-item [routerLink]="['program-tracker', username]">
+          <button
+            mat-menu-item
+            [routerLink]="['application-tracker', username]"
+          >
             Track your applications
           </button>
         </mat-menu>
