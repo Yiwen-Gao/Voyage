@@ -1,5 +1,5 @@
-<mat-drawer-container class="container">
-  <mat-drawer mode="side" opened>
+<div class="container">
+  <div class="container-item">
     <mat-button-toggle-group #group="matButtonToggleGroup">
       <mat-button-toggle value="personal">
         <a>Personal Infomation</a>
@@ -26,8 +26,74 @@
         <a>Application Fee</a>
       </mat-button-toggle>
     </mat-button-toggle-group>
-  </mat-drawer>
-  <mat-drawer-content>Main content</mat-drawer-content>
-</mat-drawer-container>
+  </div>
 
+  <div class="container-item">
+    <form class="form">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="First Name" value="Serena" />
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Last Name" value="Li" />
+      </mat-form-field>
+
+      <table class="full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Last name" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                placeholder="Long Last Name That Will Be Truncated"
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+
+      <p>
+        <mat-form-field class="full-width">
+          <textarea matInput placeholder="Address">
+1600 Amphitheatre Pkwy</textarea
+          >
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <textarea matInput placeholder="Address 2"></textarea>
+        </mat-form-field>
+      </p>
+
+      <table class="full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="City" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="State" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                #postalCode
+                maxlength="5"
+                placeholder="Postal Code"
+                value="94043"
+              />
+              <mat-hint align="end">{{ postalCode.value.length }} / 5</mat-hint>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
 <div class="example-selected-value">Selected value: {{ group.value }}</div>
