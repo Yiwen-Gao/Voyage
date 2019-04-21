@@ -1,0 +1,26 @@
+#home-container {
+  padding: 20px;
+  text-align: center;
+}
+
+#logo {
+  height: 100px;
+}
+
+.big {
+  font-size: 75px;
+}
+
+.medium {
+  font-size: 25px;
+}
+
+.small-margin {
+  margin: 5px;
+}
+
+#log-in {
+  width: 25%;
+  margin: 20px auto;
+  padding: 20px;
+}
