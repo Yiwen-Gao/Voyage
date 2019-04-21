@@ -1,6 +1,11 @@
 table {
-	width: 100%;
+  width: 100%;
 }
+
 td {
-	border: 10px;
+  padding-right: 15px !important;
+}
+
+.container {
+  margin: 10px 30px 5px 30px;
 }
