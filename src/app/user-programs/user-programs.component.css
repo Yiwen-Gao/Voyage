@@ -55,5 +55,6 @@ td {
 }
 
 .missing {
-  margin-top: 5px;
+  margin: 5px 0px;
+  color: #c30707;
 }
