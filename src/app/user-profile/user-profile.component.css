@@ -10,7 +10,8 @@
 }
 
 .form-container {
-  margin-top: 3%;
+  margin-top: 1%;
+  margin-left: 1%;
 }
 .mat-button-toggle-group {
   flex-direction: column;
@@ -19,7 +20,7 @@
 .form {
   margin-left: 5%;
   min-width: 150px;
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
 }
 
@@ -29,4 +30,29 @@
 
 td {
   padding-right: 8px;
+}
+
+button {
+  font-size: 11px;
+  padding: 0px 9px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.small-title {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.59);
+  padding-bottom: 8px;
+}
+
+::ng-deep
+  .mat-button-toggle-appearance-standard
+  .mat-button-toggle-label-content {
+  line-height: 20px !important;
 }
