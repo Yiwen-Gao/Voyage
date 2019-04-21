@@ -57,7 +57,10 @@
 
       <p>
         <mat-form-field class="full-width">
-          <textarea matInput placeholder="ADDRESS">1600 Sample Pkwy</textarea>
+          <textarea matInput placeholder="ADDRESS">
+1600 Sample Pkwy
+APT 205
+          </textarea>
         </mat-form-field>
         <mat-form-field class="full-width">
           <textarea matInput placeholder="ADDRESS 2"></textarea>
@@ -91,7 +94,7 @@
       </table>
     </form>
 
-    <!-- TEST SCORE FORM -->
+    <!-- EDUCATION FORM -->
     <form class="form" *ngIf="group.value === 'education'">
       <mat-form-field class="full-width">
         <input matInput placeholder="COUNTRY" value="United State" />
@@ -147,7 +150,7 @@
         </tr>
       </table>
 
-      <button mat-stroked-button color="primary">Add School</button>
+      <button mat-stroked-button>Add School</button>
     </form>
 
     <!-- TEST SCORE FORM -->
@@ -176,4 +179,3 @@
   </div>
   <!-- END OF FORM-CONTAINER-->
 </div>
-<div class="example-selected-value">Selected value: {{ group.value }}</div>

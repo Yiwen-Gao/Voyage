@@ -1,3 +1,9 @@
-.toolbar-btn {
-  /*color: white;*/
+.user-icon {
+  position: absolute;
+  font-size: 20px;
+  right: 70px;
+}
+
+.user-btn {
+  margin-left: 12px;
 }

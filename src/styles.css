@@ -1,6 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+/*@import '~@fontawesome/fontawesome-free/css/all.css';*/
 
 body {
   font-family: 'Questrial', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #3f51b5;
+}
+
+.mat-button-toggle-group-appearance-standard
+  .mat-button-toggle
+  + .mat-button-toggle {
+  border-left: none;
 }
