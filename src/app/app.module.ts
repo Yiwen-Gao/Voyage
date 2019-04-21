@@ -26,6 +26,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatExpansionModule,
     MatSelectModule,
     MatProgressBarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
