@@ -1,22 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-toolbar color="primary">
   <mat-toolbar-row style="justify-content: space-between">
-    <span class="logo">Voyage</span>
+    <button mat-button [routerLink]="['']">
+      {{companyName}}
+    </button>
     <p>
-      <span
-        ><button mat-button class="toolbar-btn" routerLink="">
-          Program Finder
-        </button></span
-      >
-      <span>
-        <button
-          mat-button
-          class="toolbar-btn"
-          [routerLink]="['user', username]"
-        >
-          {{ username }}
-        </button>
-      </span>
+      <button mat-button [routerLink]="['program-finder']">
+        Program Finder
+      </button>
+      <button mat-button [routerLink]="['user', username]">
+        {{username}}
+      </button>
     </p>
   </mat-toolbar-row>
 </mat-toolbar>
