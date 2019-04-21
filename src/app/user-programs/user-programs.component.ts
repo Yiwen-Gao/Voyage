@@ -8,6 +8,5 @@ import { ProfileFormModel } from '../form-model/form-model';
   styleUrls: ['./user-programs.component.css']
 })
 export class UserProgramsComponent implements OnInit {
- panelOpenState = false;
   ngOnInit() {}
 }
