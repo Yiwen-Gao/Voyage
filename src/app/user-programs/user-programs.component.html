@@ -3,10 +3,7 @@
     <mat-button-toggle-group #group="matButtonToggleGroup">
       <mat-button-toggle value="columbia">
         <mat-accordion>
-          <mat-expansion-panel
-            (opened)="panelOpenState = true"
-            (closed)="panelOpenState = false"
-          >
+          <mat-expansion-panel expanded="true">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 Columbia University
@@ -26,10 +23,7 @@
       </mat-button-toggle>
       <mat-button-toggle value="harvard">
         <mat-accordion>
-          <mat-expansion-panel
-            (opened)="panelOpenState = true"
-            (closed)="panelOpenState = false"
-          >
+          <mat-expansion-panel>
             <mat-expansion-panel-header>
               <mat-panel-title>
                 Harvard University
@@ -49,10 +43,7 @@
       </mat-button-toggle>
       <mat-button-toggle value="princeton">
         <mat-accordion>
-          <mat-expansion-panel
-            (opened)="panelOpenState = true"
-            (closed)="panelOpenState = false"
-          >
+          <mat-expansion-panel>
             <mat-expansion-panel-header>
               <mat-panel-title>
                 Princeton University
@@ -73,7 +64,7 @@
     </mat-button-toggle-group>
   </div>
   <div class="container-item form-container">
-    <form class="form" *ngIf="group.value === 'columbia'">
+    <form class="form" *ngIf="!group.value || group.value === 'columbia'">
       <mat-form-field class="full-width">
         <input matInput placeholder="PREFERRED START TERM" value="FALL 2020" />
       </mat-form-field>
