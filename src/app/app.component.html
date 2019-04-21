@@ -1,23 +1,22 @@
-<!--<mat-toolbar color="primary">-->
-  <!--<mat-toolbar-row style="justify-content: space-between">-->
-    <!--<button mat-button routerLink="">-->
-      <!--{{companyName}}-->
-    <!--</button>-->
-    <!--<p>-->
-      <!--<button mat-button [routerLink]="['program-finder']">-->
-        <!--Program Finder-->
-      <!--</button>-->
-      <!--<button mat-button [routerLink]="['user', username]">-->
-        <!--{{username}}-->
-      <!--</button>-->
-    <!--</p>-->
-  <!--</mat-toolbar-row>-->
-<!--</mat-toolbar>-->
+<mat-toolbar color="primary">
+  <mat-toolbar-row style="justify-content: space-between">
+    <button mat-button routerLink="">
+      {{companyName}}
+    </button>
+    <p>
+      <button mat-button [routerLink]="['program-finder']">
+        Program Finder
+      </button>
+      <button mat-button [routerLink]="['user', username]">
+        {{username}}
+      </button>
+    </p>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-<!--<router-outlet></router-outlet>-->
+<router-outlet></router-outlet>
 
-<button mat-button routerLink="">
-  {{companyName}}
-</button>
-<app-user></app-user>
-
+<!--<button mat-button routerLink="">-->
+  <!--{{companyName}}-->
+<!--</button>-->
+<!--<app-user></app-user>-->

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import logoPath from '../../assets/voyage-logo.png';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +6,8 @@ import logoPath from '../../assets/voyage-logo.png';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  readonly logo = logoPath;
-  constructor() { }
+  readonly logo = '../../assets/voyage-logo.png';
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

@@ -22,8 +22,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,7 @@ import { MatSelectModule } from '@angular/material/select';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent},
+      { path: '', component: HomeComponent },
       { path: 'program-finder', component: ProgramFinderComponent },
       { path: 'user/:username', component: UserComponent }
     ]),
@@ -57,7 +59,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatTabsModule,
     FormsModule,
     MatExpansionModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressBarModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
