@@ -1,3 +1,12 @@
+#application-tracker-container {
+	width: 1250px;
+  margin: 20px auto;
+}
+
+#application-tracker {
+  width: 100%;
+}
+
 table {
   width: 100%;
 }
