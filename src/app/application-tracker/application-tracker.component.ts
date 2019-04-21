@@ -20,7 +20,7 @@ const APPLICATIONS: Applications[] = [
     missing: 'CV, GRE Score'
   },
   {
-    university: 'Massachusetts Institute of Technology',
+    university: 'Harvard University',
     program: 'Master of Computer Science',
     deadline: 'Mar 20, 2020',
     website: 'https://www.eecs.mit.edu/academics-admissions/graduate-program',
