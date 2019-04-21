@@ -4,11 +4,16 @@
   <h3 class="medium small-margin">The journey begins</h3>
 
   <div id="log-in" class="mat-elevation-z4">
+    <button mat-stroked-button class="log-in-option">Applicants</button>
+    <button mat-stroked-button class="log-in-option">Admissions</button>
     <div class="small-margin">
-      <button mat-stroked-button>Applicants</button>
+      <mat-form-field>
+        <input matInput placeholder="Username">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Password">
+      </mat-form-field>
     </div>
-    <div class="small-margin">
-      <button mat-stroked-button>Admissions</button>
-    </div>
+    <button mat-raised-button class="log-in-option" color="primary">Log In</button>
   </div>
 </div>

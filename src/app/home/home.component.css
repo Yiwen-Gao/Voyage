@@ -24,3 +24,13 @@
   margin: 20px auto;
   padding: 20px;
 }
+
+.log-in-option {
+  width: 45%;
+  margin: 0px 1%;
+}
+
+mat-form-field, input {
+  width: 90%;
+  margin: auto;
+}
