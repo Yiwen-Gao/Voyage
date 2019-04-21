@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProfileFormModel } from '../form-model/form-model';
 
 @Component({
   selector: 'app-user-programs',
