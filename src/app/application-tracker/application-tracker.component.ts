@@ -1,16 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-interface Applications {
-  university: string;
-  program: string;
-  deadline: string;
-  website: string;
-  completion: string;
-  missing: string;
-}
-
-const APPLICATIONS: Applications[] = [
+const APPLICATIONS = [
   {
     university: 'Columbia',
     program: 'CS MS',
@@ -25,7 +16,7 @@ const APPLICATIONS: Applications[] = [
     deadline: 'Dec 15',
     website: 'https://www.eecs.mit.edu/academics-admissions/graduate-program',
     completion: '60%',
-    missing: 'Recommandation Letter'
+    missing: 'Recommendation Letter'
   }
 ];
 
@@ -41,7 +32,6 @@ export class ApplicatoinTrackerComponent implements OnInit {
 
   displayedColumns: string[] = ['university', 'program', 'deadline', 'completion', 'missing'];
   dataSource = APPLICATIONS;
-
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {

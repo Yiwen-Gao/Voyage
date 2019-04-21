@@ -1,6 +1,8 @@
-table {
-	width: 100%;
+#application-tracker-container {
+	width: 1250px;
+  margin: 20px auto;
 }
-td {
-	border: 10px;
+
+#application-tracker {
+  width: 100%;
 }
