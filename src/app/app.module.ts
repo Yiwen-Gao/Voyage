@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { UserProgramsComponent } from './user-programs/user-programs.component';
 import { UserComponent } from './user/user.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -19,7 +20,9 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import {MatExpansionModule} from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
@@ -28,13 +31,16 @@ import { MatSelectModule } from '@angular/material/select';
     ProgramFinderComponent,
     UserProfileComponent,
     ApplicatoinTrackerComponent,
-    UserComponent
+    UserProgramsComponent,
+    UserComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      { path: '', component: ProgramFinderComponent },
+      { path: '', component: HomeComponent},
+      { path: 'program-finder', component: ProgramFinderComponent },
       { path: 'user/:username', component: UserComponent }
     ]),
     BrowserAnimationsModule,
@@ -50,6 +56,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatChipsModule,
     MatTabsModule,
     FormsModule,
+    MatExpansionModule
     MatSelectModule
   ],
   providers: [],
