@@ -56,7 +56,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatChipsModule,
     MatTabsModule,
     FormsModule,
-    MatExpansionModule
+    MatExpansionModule,
     MatSelectModule
   ],
   providers: [],
