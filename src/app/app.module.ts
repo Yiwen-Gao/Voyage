@@ -20,6 +20,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
@@ -31,13 +32,15 @@ import { MatSelectModule } from '@angular/material/select';
     UserProfileComponent,
     ApplicatoinTrackerComponent,
     UserProgramsComponent,
-    UserComponent
+    UserComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      { path: '', component: ProgramFinderComponent },
+      { path: '', component: HomeComponent},
+      { path: 'program-finder', component: ProgramFinderComponent },
       { path: 'user/:username', component: UserComponent }
     ]),
     BrowserAnimationsModule,
