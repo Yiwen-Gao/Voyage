@@ -2,28 +2,25 @@
   <div class="container-item">
     <mat-button-toggle-group #group="matButtonToggleGroup">
       <mat-button-toggle value="personal">
-        <a>Personal Infomation</a>
+        <p>Personal Infomation</p>
       </mat-button-toggle>
       <mat-button-toggle value="education">
-        <a>Education</a>
+        <p>Education</p>
       </mat-button-toggle>
       <mat-button-toggle value="scores">
-        <a>Test Scores</a>
+        <p>Test Scores</p>
       </mat-button-toggle>
       <mat-button-toggle value="transcript">
-        <a>Transcripts</a>
+        <p>Transcripts</p>
       </mat-button-toggle>
       <mat-button-toggle value="documents">
-        <a>Required Documents</a>
+        <p>Required Documents</p>
       </mat-button-toggle>
       <mat-button-toggle value="experience">
-        <a>Experiences</a>
+        <p>Experiences</p>
       </mat-button-toggle>
       <mat-button-toggle value="recommendation">
-        <a>Recommendation Letter</a>
-      </mat-button-toggle>
-      <mat-button-toggle value="fee">
-        <a>Application Fee</a>
+        <p>Recommendation Letter</p>
       </mat-button-toggle>
     </mat-button-toggle-group>
   </div>
@@ -100,16 +97,69 @@ APT 205
 
     <!-- EDUCATION FORM -->
     <form class="form" *ngIf="group.value === 'education'">
-      <mat-form-field class="full-width">
-        <input matInput placeholder="COUNTRY" value="United State" />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input
-          matInput
-          placeholder="SCHOOL NAME"
-          value="SUNY Stony Brook University"
-        />
-      </mat-form-field>
+      <table class="full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="COUNTRY" value="United State" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                placeholder="SCHOOL NAME"
+                value="Columbia University"
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input
+                matInput
+                placeholder="PHONE NUMBER"
+                value="(212) 854-1754"
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+
+      <p>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="ADDRESS" value="116th St & Broadway" />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="ADDRESS 2" />
+        </mat-form-field>
+      </p>
+
+      <table class="full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="CITY" value="New York City" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="STATE" value="NY" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                #postalCode
+                maxlength="5"
+                placeholder="POSTAL CODE"
+                value="10027"
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+
       <table class="full-width" cellspacing="0">
         <tr>
           <td>
@@ -159,12 +209,18 @@ APT 205
 
     <!-- TEST SCORE FORM -->
     <form class="form" *ngIf="group.value === 'scores'">
-      <mat-form-field class="full-width">
-        <input matInput placeholder="TEST TYPE" value="GRE" />
-        <span style="font-size: 48px; color: green;">
+      <p>
+        <b>Status: </b>Sent
+        <span style="font-size: 13px; color: green;">
           <i class="fas fa-check-circle"></i>
         </span>
+      </p>
+      <br />
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="TEST TYPE" value="GRE" />
       </mat-form-field>
+
       <table class="full-width" cellspacing="0">
         <tr>
           <td>
@@ -192,24 +248,137 @@ APT 205
 
     <!-- TRANSCRIPT -->
     <form class="form" *ngIf="group.value === 'transcript'">
-      Transcript Form
+      <div style="margin-left: 15px">
+        <p class="title">UPLOAD YOUR TRANSCRIPT</p>
+        <p>
+          <span class="small-title">Transcript.pdf </span> Uploaded
+          <span style="font-size: 13px; color: green;">
+            <i class="fas fa-check-circle"></i>
+          </span>
+        </p>
+        <button mat-stroked-button>Upload Another Transcript</button>
+      </div>
     </form>
 
     <!-- REQUIRED DOCUMENT FORM -->
-    <form class="form" *ngIf="group.value === 'documents'">Documents Form</form>
+    <form class="form" *ngIf="group.value === 'documents'">
+      <div style="margin-left: 15px">
+        <p class="title">UPLOAD YOUR RESUME</p>
+        <p>
+          <span class="small-title">resume.pdf </span> Uploaded
+          <span style="font-size: 13px; color: green;">
+            <i class="fas fa-check-circle"></i>
+          </span>
+        </p>
+        <button mat-stroked-button>Upload Another Resume</button>
+      </div>
+      <div style="margin-left: 15px; margin-top: 50px">
+        <p class="title">UPLOAD YOUR PERSONAL STATEMENT</p>
+        <p>
+          <span class="small-title">CV.pdf </span> Uploaded
+          <span style="font-size: 13px; color: green;">
+            <i class="fas fa-check-circle"></i>
+          </span>
+        </p>
+        <button mat-stroked-button>Upload Another Personal Statement</button>
+      </div>
+    </form>
 
     <!-- EXPERIENCE FORM -->
     <form class="form" *ngIf="group.value === 'experience'">
-      Experience Form
+      <mat-form-field class="full-width">
+        <input matInput placeholder="COUNTRY" value="United State" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="COMPANY NAME" value="Facebook, Inc." />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="POSITION"
+          value="Software Engineer Summer Intern"
+        />
+      </mat-form-field>
+      <table class="full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="START DATE" value="JUN-07-2018" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="END DATE" value="AUG-15-2018" />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+
+      <button mat-stroked-button>Add Another Position</button>
     </form>
 
     <!-- RECOMMENDATION LETTER -->
     <form class="form" *ngIf="group.value === 'recommendation'">
-      Recommendation Form
-    </form>
+      <table class="full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field style="width: 100px">
+              <input matInput placeholder="FIRST NAME" value="William" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field style="width: 100px">
+              <input matInput placeholder="LAST NAME" value="Wang" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="EMAIL"
+                value="william.wang@columbia.edu"
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <p>
+              Letter Received
+              <span style="font-size: 13px; color: green;">
+                <i class="fas fa-check-circle"></i>
+              </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field style="width: 100px">
+              <input matInput placeholder="FIRST NAME" value="Tom" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field style="width: 100px">
+              <input matInput placeholder="LAST NAME" value="Mitchell" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="EMAIL"
+                value="tom.mitchell@columbia.edu"
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <p>
+              Letter Pending
+            </p>
+          </td>
+        </tr>
+      </table>
 
-    <!-- PAY FEE -->
-    <form class="form" *ngIf="group.value === 'fee'">Fee</form>
+      <button mat-stroked-button>Add Another Recommender</button>
+    </form>
   </div>
   <!-- END OF FORM-CONTAINER-->
 </div>
