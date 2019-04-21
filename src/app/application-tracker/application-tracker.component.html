@@ -1,3 +1,35 @@
+<!--<div id="application-tracker-container">-->
+  <!--<table mat-table [dataSource]="dataSource" id="application-tracker" class="mat-elevation-z8">-->
+    <!--<ng-container matColumnDef="university">-->
+      <!--<th mat-header-cell *matHeaderCellDef>University</th>-->
+      <!--<td mat-cell *matCellDef="let element"> {{element.university}} </td>-->
+    <!--</ng-container>-->
+
+    <!--<ng-container matColumnDef="program">-->
+      <!--<th mat-header-cell *matHeaderCellDef>Program</th>-->
+      <!--<td mat-cell *matCellDef="let element"> {{element.program}} </td>-->
+    <!--</ng-container>-->
+
+    <!--<ng-container matColumnDef="deadline">-->
+      <!--<th mat-header-cell *matHeaderCellDef>Deadline</th>-->
+      <!--<td mat-cell *matCellDef="let element"> {{element.deadline}} </td>-->
+    <!--</ng-container>-->
+
+    <!--<ng-container matColumnDef="completion">-->
+      <!--<th mat-header-cell *matHeaderCellDef>Completion</th>-->
+      <!--<td mat-cell *matCellDef="let element"> {{element.completion}} </td>-->
+    <!--</ng-container>-->
+
+    <!--<ng-container matColumnDef="missing">-->
+      <!--<th mat-header-cell *matHeaderCellDef>Missing</th>-->
+      <!--<td mat-cell *matCellDef="let element"> {{element.missing}} </td>-->
+    <!--</ng-container>-->
+
+    <!--<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>-->
+    <!--<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>-->
+  <!--</table>-->
+<!--</div>-->
+
 <div class="container">
   <table mat-table [dataSource]="dataSource">
     <!--- Note that these columns can be defined in any order.
@@ -24,17 +56,13 @@
     <!-- completion Column -->
     <ng-container matColumnDef="completion">
       <th mat-header-cell *matHeaderCellDef>COMPLETION</th>
-      <td
-        mat-cell
-        *matCellDef="let element"
-        style="padding-right: 20px !important"
-      >
+      <td mat-cell *matCellDef="let element" style="padding-right: 20px !important">
         <mat-progress-bar
           mode="determinate"
           value="{{ element.completion }}"
           matTooltip="{{ 'Application ' + element.completion + '% complete' }}"
-          style="width: 130px;"
-        ></mat-progress-bar>
+          style="width: 130px;">
+        </mat-progress-bar>
       </td>
     </ng-container>
 
