@@ -4,9 +4,19 @@
   <h3 class="medium small-margin">The journey begins</h3>
 
   <div id="log-in" class="mat-elevation-z4">
-    <button mat-stroked-button class="log-in-option">Applicants</button>
-    <button mat-stroked-button class="log-in-option">Admissions</button>
+    <button
+      mat-stroked-button
+      *ngFor="let option of options"
+      (click)="selectOption(option)"
+      class="log-in-option"
+      [ngClass]="{'selected-option': option === selectedOption}">
+      {{option | titlecase}}
+    </button>
+
     <div class="small-margin">
+      <mat-form-field *ngIf="isAdmissions">
+        <input matInput placeholder="Institution">
+      </mat-form-field>
       <mat-form-field>
         <input matInput placeholder="Username">
       </mat-form-field>
@@ -14,6 +24,11 @@
         <input matInput placeholder="Password">
       </mat-form-field>
     </div>
-    <button mat-raised-button class="log-in-option" color="primary">Log In</button>
+    <a mat-raised-button *ngIf="selectedOption === 'applicants'" [routerLink]="['applicants']" class="log-in-option" color="primary">
+      Log In
+    </a>
+    <a mat-raised-button *ngIf="selectedOption === 'admissions'" [routerLink]="['admissions']" class="log-in-option" color="primary">
+      Log In
+    </a>
   </div>
 </div>
