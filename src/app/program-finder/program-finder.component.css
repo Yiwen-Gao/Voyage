@@ -1,10 +1,10 @@
-#welcome-message, #search {
+#search {
   text-align: center;
 }
 
 #program-finder-container {
   width: 1250px;
-  margin: auto;
+  margin: 20px auto;
 }
 
 #search-bar {
