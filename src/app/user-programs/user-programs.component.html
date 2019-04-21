@@ -1,21 +1,71 @@
-<p> user-programs works! 
-</p> <mat-drawer-container class="container">
-	<mat-drawer mode="side" opened>
-		<mat-button-toggle-group #group="matButtonToggleGroup">
-			<mat-button-toggle
-				value="personal"> <a>Personal Infomation</a>
-		</mat-button-toggle> <mat-button-toggle value="education">
-			<a>Education</a> </mat-button-toggle>
-		<mat-button-toggle value="scores"> <a>Test Scores</a>
-		</mat-button-toggle> <mat-button-toggle value="documents">
-		<a>Transcripts</a> </mat-button-toggle> <mat-button-toggle
-		value="documents"> <a>Required Documents</a>
-	</mat-button-toggle> <mat-button-toggle value="experience">
-		<a>Experiences</a> </mat-button-toggle> <mat-button-toggle
-		value="recommend"> <a>Recommendation Letter</a>
-	</mat-button-toggle> <mat-button-toggle value="fee"> <a>Application
-			Fee</a> </mat-button-toggle> </mat-button-toggle-group>
-	</mat-drawer> <mat-drawer-content>Main content</mat-drawer-content>
-</mat-drawer-container>
+<div class="container">
+<div class="container-item">
+<mat-button-toggle-group #group="matButtonToggleGroup">
+<mat-button-toggle value="college1">
+      <mat-accordion>
+<mat-expansion-panel (opened)="panelOpenState = true"
+		     (closed)="panelOpenState = false">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      College 1
+    </mat-panel-title>
+    <mat-panel-description>
+    City, State
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <p>I'm visible because I am open</p>
+</mat-expansion-panel>
+</mat-accordion>
+</mat-button-toggle>
+<mat-button-toggle value="college2">
+      <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+		 (closed)="panelOpenState = false">
+	      <mat-expansion-panel-header>
+		      <mat-panel-title>
+			      College 2
+		      </mat-panel-title>
+		      <mat-panel-description>
+		      City, State
+		      </mat-panel-description>
+	      </mat-expansion-panel-header>
+	      <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+      </mat-accordion>
+</mat-button-toggle>
+<mat-button-toggle value="college3">
+      <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+		 (closed)="panelOpenState = false">
+	      <mat-expansion-panel-header>
+		      <mat-panel-title>
+			      College 3
+		      </mat-panel-title>
+		      <mat-panel-description>
+		      City, State
+		      </mat-panel-description>
+	      </mat-expansion-panel-header>
+	      <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+      </mat-accordion>
+</mat-button-toggle>
+<mat-button-toggle value="college4">
+      <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+		 (closed)="panelOpenState = false">
+	      <mat-expansion-panel-header>
+		      <mat-panel-title>
+			      College 4
+		      </mat-panel-title>
+		      <mat-panel-description>
+			      City, State
+		      </mat-panel-description>
+	      </mat-expansion-panel-header>
+	      <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+      </mat-accordion>
+</mat-button-toggle>
 
-<div class="example-selected-value">Selected value: {{ group.value }</div>	
+</mat-button-toggle-group>
+</div>
+</div>

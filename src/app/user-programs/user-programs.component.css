@@ -1,10 +1,15 @@
 .container {
-	  width: 90%;
-	    height: 500px;
-	      margin: 10px;
-      }
+  width: 90%;
+  height: 100%;
+  margin: 10px;
+  display: flex;
+}
 
-      .mat-button-toggle-group {
-	        flex-direction: column;
-	}
-	
+.container-item {
+  flex-direction: row;
+}
+.mat-button-toggle-group {
+  flex-direction: column;
+}
+
+
