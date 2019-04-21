@@ -19,6 +19,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,15 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     ProgramFinderComponent,
     UserProfileComponent,
     ApplicatoinTrackerComponent,
-    UserComponent
+    UserComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      { path: '', component: ProgramFinderComponent },
+      { path: '', component: HomeComponent},
+      { path: 'program-finder', component: ProgramFinderComponent },
       { path: 'user/:username', component: UserComponent }
     ]),
     BrowserAnimationsModule,
