@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ENTER, COMMA} from '@angular/cdk/keycodes';
-import PROGRAM_DATA from '../data/programData.json';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
+import PROGRAM_DATA from '../data/programData.json';
 
 @Component({
   selector: 'app-program-finder',
@@ -9,7 +8,7 @@ import { ENTER, COMMA } from '@angular/cdk/keycodes';
   styleUrls: ['./program-finder.component.css']
 })
 export class ProgramFinderComponent implements OnInit {
-  colNames = ['program', 'university'];
+  colNames = ['program', 'track', 'university', 'location', 'deadline'];
   dataSource = PROGRAM_DATA;
   filters = [];
   readonly separatorKeysCodes = [ENTER, COMMA];
