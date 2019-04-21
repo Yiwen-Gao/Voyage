@@ -42,6 +42,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     AppRoutingModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
+      { path: 'applicants', component: ProgramFinderComponent },
+      { path: 'admissions', component: ProgramFinderComponent },
       { path: 'program-finder', component: ProgramFinderComponent },
       { path: 'user/:username', component: UserComponent }
     ]),
