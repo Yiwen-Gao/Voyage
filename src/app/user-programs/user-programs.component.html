@@ -24,7 +24,7 @@
           </mat-expansion-panel>
         </mat-accordion>
       </mat-button-toggle>
-      <mat-button-toggle value="mit">
+      <mat-button-toggle value="harvard">
         <mat-accordion>
           <mat-expansion-panel
             (opened)="panelOpenState = true"
@@ -75,60 +75,83 @@
   <div class="container-item form-container">
     <form class="form" *ngIf="group.value === 'columbia'">
       <mat-form-field class="full-width">
-        <input matInput placeholder="COUNTRY" value="United State" />
+        <input matInput placeholder="PREFERRED START TERM" value="FALL 2020" />
       </mat-form-field>
       <mat-form-field class="full-width">
         <input
           matInput
-          placeholder="SCHOOL NAME"
-          value="SUNY Stony Brook University"
+          placeholder="PREFERRED ADMISSION PLAN"
+          value="REGULAR"
         />
       </mat-form-field>
-      <table class="full-width" cellspacing="0">
-        <tr>
-          <td>
-            <mat-form-field class="full-width">
-              <input matInput placeholder="STARTING DATE" value="JUL-07-2014" />
-            </mat-form-field>
-          </td>
-          <td>
-            <mat-form-field class="full-width">
-              <input
-                matInput
-                placeholder="(EXPECTED) GRATUATE DATE"
-                value="MAY-07-2018"
-              />
-            </mat-form-field>
-          </td>
-        </tr>
-      </table>
-
       <mat-form-field class="full-width">
-        <input matInput placeholder="DEGREE TYPE" value="Bachelor of Science" />
+        <input matInput placeholder="NEED-BASED FINANCIAL AID" value="No" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="FELLOWSHIP" value="GEM Fellowship" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="PORTFOLIO" value="" />
       </mat-form-field>
       <mat-form-field class="full-width">
         <input
           matInput
-          placeholder="MAJOR / FIELD OF STUDY"
-          value="Computer Science"
+          placeholder="HAVE YOU EVER BEEN ISSUED DISCIPLINE, PLACED ON PROBATION, SUSPENDED, OR DISMISSED FROM AN EDUCATIONAL INSTITUTION?"
+          value="No"
         />
       </mat-form-field>
-      <table class="full-width" cellspacing="0">
-        <tr>
-          <td>
-            <mat-form-field class="full-width">
-              <input matInput placeholder="GPA" value="3.83" />
-            </mat-form-field>
-          </td>
-          <td>
-            <mat-form-field class="full-width">
-              <input matInput placeholder="GPA TYPE" value="US Standard" />
-            </mat-form-field>
-          </td>
-        </tr>
-      </table>
-
-      <button mat-stroked-button>Add School</button>
+    </form>
+    <form class="form" *ngIf="group.value === 'harvard'">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="PREFERRED START TERM" value="FALL 2020" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="PREFERRED ADMISSION PLAN"
+          value="REGULAR"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="PORTFOLIO" value="" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="NEED-BASED FINANCIAL AID" value="No" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="FELLOWSHIP" value="" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="ARE YOU A VETERAN?" value="" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="HAVE YOU EVER BEEN ISSUED DISCIPLINE, PLACED ON PROBATION, SUSPENDED, OR DISMISSED FROM AN EDUCATIONAL INSTITUTION?"
+          value=""
+        />
+      </mat-form-field>
+    </form>
+    <form class="form" *ngIf="group.value === 'princeton'">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="PREFERRED START TERM" value="FALL 2020" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="PREFERRED ADMISSION PLAN"
+          value="REGULAR"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="NEED-BASED FINANCIAL AID" value="No" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="FELLOWSHIP" value="" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="PORTFOLIO" value="" />
+      </mat-form-field>
     </form>
   </div>
 </div>
