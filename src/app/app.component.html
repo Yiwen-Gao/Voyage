@@ -1,22 +1,20 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row style="justify-content: space-between">
     <button mat-button routerLink="">
-      {{companyName}}
+      {{ companyName }}
     </button>
     <p>
       <button mat-button [routerLink]="['program-finder']">
-        Program Finder
+        PROGRAM FINDER
       </button>
-      <button mat-button [routerLink]="['user', username]">
-        {{username}}
+      <button mat-button [routerLink]="['user', username]" class="user-btn">
+        <span class="user-icon">
+          <i class="fas fa-user-circle"></i>
+        </span>
+        {{ username }}
       </button>
     </p>
   </mat-toolbar-row>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
-
-<!--<button mat-button routerLink="">-->
-  <!--{{companyName}}-->
-<!--</button>-->
-<!--<app-user></app-user>-->

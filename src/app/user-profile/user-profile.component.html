@@ -54,6 +54,10 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
+      <br />
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="PHONE NUMBER" value="(123) 456 7890" />
+      </mat-form-field>
 
       <p>
         <mat-form-field class="full-width">
@@ -154,7 +158,37 @@ APT 205
     </form>
 
     <!-- TEST SCORE FORM -->
-    <form class="form" *ngIf="group.value === 'scores'">Test Scores Form</form>
+    <form class="form" *ngIf="group.value === 'scores'">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="TEST TYPE" value="GRE" />
+        <span style="font-size: 48px; color: green;">
+          <i class="fas fa-check-circle"></i>
+        </span>
+      </mat-form-field>
+      <table class="full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Verbal Reasoning" value="165" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Analytical Writing" value="4.5" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                placeholder="Quantitative Reasoning"
+                value="170"
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </form>
 
     <!-- TRANSCRIPT -->
     <form class="form" *ngIf="group.value === 'transcript'">
