@@ -24,8 +24,6 @@ const APPLICATIONS: Applications[] = [
     program: 'Master of Computer Science',
     deadline: 'Mar 20, 2020',
     website: 'https://www.eecs.mit.edu/academics-admissions/graduate-program',
-    completion: '60%',
-    missing: 'Recommendation Letter',
     completion: 80,
     missing: 'Recommandation Letter'
   },
