@@ -30,7 +30,7 @@
 
   <div class="container-item form-container">
     <!-- Profile Form -->
-    <form class="form" *ngIf="group.value === 'personal'">
+    <form class="form" *ngIf="!group.value || group.value === 'personal'">
       <table class="full-width" cellspacing="0">
         <tr>
           <td>
@@ -92,7 +92,63 @@
     </form>
 
     <!-- TEST SCORE FORM -->
-    <form class="form" *ngIf="group.value === 'education'">Education Form</form>
+    <form class="form" *ngIf="group.value === 'education'">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="COUNTRY" value="United State" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="SCHOOL NAME"
+          value="SUNY Stony Brook University"
+        />
+      </mat-form-field>
+      <table class="full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="STARTING DATE" value="JUL-07-2014" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                placeholder="(EXPECTED) GRATUATE DATE"
+                value="MAY-07-2018"
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="DEGREE TYPE" value="Bachelor of Science" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="MAJOR / FIELD OF STUDY"
+          value="Computer Science"
+        />
+      </mat-form-field>
+      <table class="full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="GPA" value="3.83" />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="GPA TYPE" value="US Standard" />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+
+      <button mat-flat-button>ADD ANOTHER SCHOOL</button>
+    </form>
 
     <!-- TEST SCORE FORM -->
     <form class="form" *ngIf="group.value === 'scores'">Test Scores Form</form>
