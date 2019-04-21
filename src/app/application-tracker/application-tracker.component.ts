@@ -6,26 +6,34 @@ interface Applications {
   program: string;
   deadline: string;
   website: string;
-  completion: string;
+  completion: number;
   missing: string;
 }
 
 const APPLICATIONS: Applications[] = [
   {
-    university: 'Columbia',
-    program: 'CS MS',
-    deadline: 'Dec 15',
+    university: 'Columbia University',
+    program: 'Data Science Master Program',
+    deadline: 'Mar 15, 2020',
     website: 'http://www.cs.columbia.edu/education/admissions/#masters',
-    completion: '70%',
-    missing: 'CV, GRE Grade'
+    completion: 70,
+    missing: 'CV, GRE Score'
   },
   {
-    university: 'MIT',
-    program: 'CS MS',
-    deadline: 'Dec 15',
+    university: 'Massachusetts Institute of Technology',
+    program: 'Master of Computer Science',
+    deadline: 'Mar 20, 2020',
     website: 'https://www.eecs.mit.edu/academics-admissions/graduate-program',
-    completion: '60%',
+    completion: 80,
     missing: 'Recommandation Letter'
+  },
+  {
+    university: 'Princeton University',
+    program: 'Master of Computer Science',
+    deadline: 'Mar 20, 2020',
+    website: 'https://www.eecs.mit.edu/academics-admissions/graduate-program',
+    completion: 60,
+    missing: 'Education History, Recommendation Letter'
   }
 ];
 
@@ -39,9 +47,15 @@ export class ApplicatoinTrackerComponent implements OnInit {
 
   username: string;
 
-  displayedColumns: string[] = ['university', 'program', 'deadline', 'completion', 'missing'];
+  displayedColumns: string[] = [
+    'university',
+    'program',
+    'deadline',
+    'completion',
+    'missing',
+    'website'
+  ];
   dataSource = APPLICATIONS;
-
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {

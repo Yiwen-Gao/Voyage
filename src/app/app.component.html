@@ -6,9 +6,13 @@
     </button>
     <p>
       <button mat-button [routerLink]="['program-finder']">
-        Program Finder
+        PROGRAM FINDER
       </button>
-      <button mat-button [routerLink]="['user', username]">
+
+      <button mat-button [routerLink]="['user', username]" class="user-btn">
+        <span class="user-icon">
+          <i class="fas fa-user-circle"></i>
+        </span>
         {{ username }}
       </button>
     </p>
