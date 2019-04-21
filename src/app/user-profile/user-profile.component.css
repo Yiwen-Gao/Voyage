@@ -8,6 +8,10 @@
 .container-item {
   flex-direction: row;
 }
+
+.form-container {
+  margin-top: 3%;
+}
 .mat-button-toggle-group {
   flex-direction: column;
 }

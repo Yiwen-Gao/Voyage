@@ -22,6 +22,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { FormsModule } from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { MatSelectModule } from '@angular/material/select';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +54,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatTabsModule,
     FormsModule,
     MatExpansionModule
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
