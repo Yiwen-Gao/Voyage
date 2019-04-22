@@ -27,6 +27,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { AdmissionsInterfaceComponent } from './admissions-interface/admissions-interface.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { AdmissionsInterfaceComponent } from './admissions-interface/admissions-
     MatExpansionModule,
     MatSelectModule,
     MatProgressBarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
