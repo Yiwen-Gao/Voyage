@@ -4,6 +4,7 @@
   right: 70px;
 }
 
-.user-btn {
-  margin-left: 12px;
+.log-out-btn {
+  margin: 5px;
+  border: 1px solid white;
 }
