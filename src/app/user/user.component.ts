@@ -7,8 +7,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  readonly logoPath = '../../assets/voyage-logo.png';
   username: string;
+
+  constructor(private route: ActivatedRoute) {}
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.username = params.get('username');
