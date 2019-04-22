@@ -1,148 +1,285 @@
 <div class="container">
   <div class="container-item">
-    <mat-button-toggle-group #group="matButtonToggleGroup">
-      <mat-button-toggle value="columbia">
-        <mat-accordion>
-          <mat-expansion-panel expanded="true">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Columbia University
-              </mat-panel-title>
-              <mat-panel-description>
-                New York, NY
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-            <div>
-              <p><b>Phone:</b> (212) 854-2522</p>
-              <p><b>Fax:</b> (212) 854-1209</p>
-              <p><b>Email: </b>ugrad-ask@columbia.edu</p>
-              <p><b>Application Fee: </b>$85</p>
-            </div>
-          </mat-expansion-panel>
-        </mat-accordion>
-      </mat-button-toggle>
-      <mat-button-toggle value="harvard">
-        <mat-accordion>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Harvard University
-              </mat-panel-title>
-              <mat-panel-description>
-                Cambridge, MA
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-            <div>
-              <p><b>Phone:</b>(617) 495-1551</p>
-              <p><b>Fax:</b> (617) 495-2232</p>
-              <p><b>Email: </b>college@fas.harvard.edu</p>
-              <p><b>Application Fee: </b>$75</p>
-            </div>
-          </mat-expansion-panel>
-        </mat-accordion>
-      </mat-button-toggle>
-      <mat-button-toggle value="princeton">
-        <mat-accordion>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Princeton University
-              </mat-panel-title>
-              <mat-panel-description>
-                Princeton, NJ
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-            <div>
-              <p><b>Phone:</b> (609) 258-3060</p>
-              <p><b>Fax:</b> (609) 258-1209</p>
-              <p><b>Email: </b>uaoffice@princeton.edu</p>
-              <p><b>Application Fee: </b>$75</p>
-            </div>
-          </mat-expansion-panel>
-        </mat-accordion>
-      </mat-button-toggle>
-    </mat-button-toggle-group>
+    <mat-accordion multi="false">
+      <mat-expansion-panel expanded="true" (opened)="school = 'columbia'">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Columbia University
+          </mat-panel-title>
+          <mat-panel-description>
+            New York, NY
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-button-toggle-group #columbiaOption="matButtonToggleGroup">
+          <mat-button-toggle value="info">
+            Program Information
+          </mat-button-toggle>
+          <mat-button-toggle value="questions"> Questions </mat-button-toggle>
+          <mat-button-toggle value="recommendation">
+            Recommendation
+          </mat-button-toggle>
+          <mat-button-toggle value="documents">
+            Other Documents
+          </mat-button-toggle>
+          <mat-button-toggle value="review">
+            Review and Submit
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel expanded="false" (opened)="school = 'harvard'">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Harvard University
+          </mat-panel-title>
+          <mat-panel-description>
+            Cambridge, CA
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-button-toggle-group #harvardOption="matButtonToggleGroup">
+          <mat-button-toggle value="info">
+            Program Information
+          </mat-button-toggle>
+          <mat-button-toggle value="questions"> Questions </mat-button-toggle>
+          <mat-button-toggle value="recommendation">
+            Recommendation
+          </mat-button-toggle>
+          <mat-button-toggle value="documents">
+            Other Documents
+          </mat-button-toggle>
+          <mat-button-toggle value="review">
+            Review and Submit
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel expanded="false" (opened)="school = 'princeton'">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Princeton University
+          </mat-panel-title>
+          <mat-panel-description>
+            Princeton, CA
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-button-toggle-group #princetonOption="matButtonToggleGroup">
+          <mat-button-toggle value="info">
+            Program Information
+          </mat-button-toggle>
+          <mat-button-toggle value="questions"> Questions </mat-button-toggle>
+          <mat-button-toggle value="recommendation">
+            Recommendation
+          </mat-button-toggle>
+          <mat-button-toggle value="documents">
+            Other Documents
+          </mat-button-toggle>
+          <mat-button-toggle value="review">
+            Review and Submit
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </mat-expansion-panel>
+    </mat-accordion>
   </div>
+
+  <!-- COLUMBIA -->
+
   <div class="container-item form-container">
-    <form class="form" *ngIf="!group.value || group.value === 'columbia'">
-      <mat-form-field class="full-width">
-        <input matInput placeholder="PREFERRED START TERM" value="FALL 2020" />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input
-          matInput
-          placeholder="PREFERRED ADMISSION PLAN"
-          value="REGULAR"
-        />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input matInput placeholder="NEED-BASED FINANCIAL AID" value="No" />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input matInput placeholder="FELLOWSHIP" value="GEM Fellowship" />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input matInput placeholder="PORTFOLIO" value="" />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input
-          matInput
-          placeholder="HAVE YOU EVER BEEN ISSUED DISCIPLINE, PLACED ON PROBATION, SUSPENDED, OR DISMISSED FROM AN EDUCATIONAL INSTITUTION?"
-          value="No"
-        />
-      </mat-form-field>
+    <form class="form" *ngIf="!school || school === 'columbia'">
+      <div
+        *ngIf="!columbiaOption.value || columbiaOption.value === 'info'"
+        class="program-info"
+      >
+        <p><b>Program:</b> Master in Computer Science</p>
+        <p><b>Application Fee: </b>$85</p>
+        <p><b>Deadline: </b>Mar 15, 2020</p>
+        <mat-divider></mat-divider>
+        <table class="missing">
+          <tr>
+            <td><b>Missing Materials:</b></td>
+            <td>Questionair</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Recommendation Letters</td>
+          </tr>
+        </table>
+
+        <mat-divider></mat-divider>
+        <p><b>Phone:</b> (212) 854-2522</p>
+        <p><b>Fax:</b> (212) 854-1209</p>
+        <p><b>Email: </b>ugrad-ask@columbia.edu</p>
+        <p>
+          <b>Website: </b
+          ><a href="http://www.cs.columbia.edu/education/admissions/#masters"
+            >http://www.cs.columbia.edu/education/admissions/#masters</a
+          >
+        </p>
+      </div>
+      <div *ngIf="columbiaOption.value === 'questions'">
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            placeholder="PREFERRED START TERM"
+            value="FALL 2020"
+          />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            placeholder="PREFERRED ADMISSION PLAN"
+            value="REGULAR"
+          />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="NEED-BASED FINANCIAL AID" value="No" />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="FELLOWSHIP" value="GEM Fellowship" />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="PORTFOLIO" value="" />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            placeholder="HAVE YOU EVER BEEN ISSUED DISCIPLINE, PLACED ON PROBATION, SUSPENDED, OR DISMISSED FROM AN EDUCATIONAL INSTITUTION?"
+            value="No"
+          />
+        </mat-form-field>
+      </div>
     </form>
-    <form class="form" *ngIf="group.value === 'harvard'">
-      <mat-form-field class="full-width">
-        <input matInput placeholder="PREFERRED START TERM" value="FALL 2020" />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input
-          matInput
-          placeholder="PREFERRED ADMISSION PLAN"
-          value="REGULAR"
-        />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input matInput placeholder="PORTFOLIO" value="" />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input matInput placeholder="NEED-BASED FINANCIAL AID" value="No" />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input matInput placeholder="FELLOWSHIP" value="" />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input matInput placeholder="ARE YOU A VETERAN?" value="" />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input
-          matInput
-          placeholder="HAVE YOU EVER BEEN ISSUED DISCIPLINE, PLACED ON PROBATION, SUSPENDED, OR DISMISSED FROM AN EDUCATIONAL INSTITUTION?"
-          value=""
-        />
-      </mat-form-field>
+
+    <!-- HARVARD -->
+    <form class="form" *ngIf="school === 'harvard'">
+      <div
+        *ngIf="!harvardOption.value || harvardOption.value === 'info'"
+        class="program-info"
+      >
+        <p><b>Program:</b> Master in Computer Science</p>
+        <p><b>Application Fee: </b>$75</p>
+        <p><b>Deadline: </b>Mar 120, 2020</p>
+        <mat-divider></mat-divider>
+        <table class="missing">
+          <tr>
+            <td><b>Missing Materials:</b></td>
+            <td>Transcript</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Recommendation Letters</td>
+          </tr>
+        </table>
+
+        <mat-divider></mat-divider>
+        <p><b>Phone:</b>(617) 495-1551</p>
+        <p><b>Fax:</b> (617) 495-2232</p>
+        <p><b>Email: </b>college@fas.harvard.edu</p>
+        <p>
+          <b>Website: </b
+          ><a
+            href="https://www.eecs.mit.edu/academics-admissions/graduate-program"
+            >https://www.eecs.mit.edu/academics-admissions/graduate-program</a
+          >
+        </p>
+      </div>
+      <div *ngIf="harvardOption.value === 'questions'">
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            placeholder="PREFERRED START TERM"
+            value="FALL 2020"
+          />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            placeholder="PREFERRED ADMISSION PLAN"
+            value="REGULAR"
+          />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="PORTFOLIO" value="" />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="NEED-BASED FINANCIAL AID" value="No" />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="FELLOWSHIP" value="" />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="ARE YOU A VETERAN?" value="" />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            placeholder="HAVE YOU EVER BEEN ISSUED DISCIPLINE, PLACED ON PROBATION, SUSPENDED, OR DISMISSED FROM AN EDUCATIONAL INSTITUTION?"
+            value=""
+          />
+        </mat-form-field>
+      </div>
     </form>
-    <form class="form" *ngIf="group.value === 'princeton'">
-      <mat-form-field class="full-width">
-        <input matInput placeholder="PREFERRED START TERM" value="FALL 2020" />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input
-          matInput
-          placeholder="PREFERRED ADMISSION PLAN"
-          value="REGULAR"
-        />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input matInput placeholder="NEED-BASED FINANCIAL AID" value="No" />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input matInput placeholder="FELLOWSHIP" value="" />
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <input matInput placeholder="PORTFOLIO" value="" />
-      </mat-form-field>
+
+    <!-- PRINCETON -->
+    <form class="form" *ngIf="school === 'princeton'">
+      <div
+        *ngIf="!princetonOption.value || princetonOption.value === 'info'"
+        class="program-info"
+      >
+        <p><b>Program:</b> Data Science Master Program</p>
+        <p><b>Application Fee: </b>$75</p>
+        <p><b>Deadline: </b>Mar 120, 2020</p>
+        <mat-divider></mat-divider>
+        <table class="missing">
+          <tr>
+            <td><b>Missing Materials:</b></td>
+            <td>Transcript</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Test Scores</td>
+          </tr>
+        </table>
+
+        <mat-divider></mat-divider>
+        <p><b>Phone:</b> (609) 258-3060</p>
+        <p><b>Fax:</b> (609) 258-1209</p>
+        <p><b>Email: </b>uaoffice@princeton.edu</p>
+        <p>
+          <b>Website: </b
+          ><a
+            href="https://www.eecs.mit.edu/academics-admissions/graduate-program"
+            >https://www.eecs.mit.edu/academics-admissions/graduate-program</a
+          >
+        </p>
+      </div>
+      <div *ngIf="princetonOption.value === 'questions'">
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            placeholder="PREFERRED START TERM"
+            value="FALL 2020"
+          />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            placeholder="PREFERRED ADMISSION PLAN"
+            value="REGULAR"
+          />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="NEED-BASED FINANCIAL AID" value="No" />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="FELLOWSHIP" value="" />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="PORTFOLIO" value="" />
+        </mat-form-field>
+      </div>
     </form>
   </div>
 </div>

@@ -7,5 +7,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./user-programs.component.css']
 })
 export class UserProgramsComponent implements OnInit {
+  school: string;
   ngOnInit() {}
 }
