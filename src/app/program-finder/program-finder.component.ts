@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
-import programData from '../data/programData.json';
+import programData from '../../data/programs.json';
 
 @Component({
   selector: 'app-program-finder',
