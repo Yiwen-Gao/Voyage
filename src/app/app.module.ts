@@ -28,6 +28,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { AdmissionComponent } from './admission/admission.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { PendingApplicantsComponent } from './pending-applicants/pending-applicants.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MatDividerModule } from '@angular/material/divider';
     ApplicantProgramsComponent,
     ApplicantComponent,
     HomeComponent,
-    AdmissionComponent
+    AdmissionComponent,
+    PendingApplicantsComponent
   ],
   imports: [
     BrowserModule,

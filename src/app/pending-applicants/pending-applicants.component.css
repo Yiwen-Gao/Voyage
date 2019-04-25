@@ -1,0 +1,17 @@
+#search {
+  text-align: center;
+}
+
+#pending-applicants-container {
+  width: 1250px;
+  margin: 20px auto;
+}
+
+#search-bar {
+  width: 500px;
+  margin: auto;
+}
+
+#results {
+  width: 100%;
+}

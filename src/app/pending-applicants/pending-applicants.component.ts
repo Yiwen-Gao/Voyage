@@ -1,21 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
-import programs from '../../data/programs.json';
+import applicants from '../../data/applicants.json';
 
 @Component({
-  selector: 'app-program-finder',
-  templateUrl: './program-finder.component.html',
-  styleUrls: ['./program-finder.component.css']
+  selector: 'app-pending-applicants',
+  templateUrl: './pending-applicants.component.html',
+  styleUrls: ['./pending-applicants.component.css']
 })
-export class ProgramFinderComponent implements OnInit {
-  colNames = ['program', 'track', 'university', 'location', 'deadline'];
-  dataSource = programs;
+export class PendingApplicantsComponent implements OnInit {
+  colNames = ['name', 'previous institution', 'GPA', 'GRE', 'status', 'full profile'];
+  dataSource = applicants;
   filters = [];
   readonly separatorKeysCodes = [ENTER, COMMA];
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   add(event): void {
     this.filters.push(event.value);
