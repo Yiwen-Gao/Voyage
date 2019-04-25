@@ -3,10 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-user-programs',
-  templateUrl: './user-programs.component.html',
-  styleUrls: ['./user-programs.component.css']
+  templateUrl: './applicant-programs.component.html',
+  styleUrls: ['./applicant-programs.component.css']
 })
-export class UserProgramsComponent implements OnInit {
+export class ApplicantProgramsComponent implements OnInit {
   school: string;
   ngOnInit() {}
 }

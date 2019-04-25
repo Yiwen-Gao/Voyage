@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { ProgramFinderComponent } from './program-finder/program-finder.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
+import { ApplicantProfileComponent } from './applicant-profile/applicant-profile.component';
 import { ApplicatoinTrackerComponent } from './application-tracker/application-tracker.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
-import { UserProgramsComponent } from './user-programs/user-programs.component';
+import { ApplicantProgramsComponent } from './applicant-programs/applicant-programs.component';
 import { ApplicantComponent } from './applicant/applicant.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -33,9 +33,9 @@ import { MatDividerModule } from '@angular/material/divider';
   declarations: [
     AppComponent,
     ProgramFinderComponent,
-    UserProfileComponent,
+    ApplicantProfileComponent,
     ApplicatoinTrackerComponent,
-    UserProgramsComponent,
+    ApplicantProgramsComponent,
     ApplicantComponent,
     HomeComponent,
     AdmissionComponent
