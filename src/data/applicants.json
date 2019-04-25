@@ -1,0 +1,12 @@
+[
+  {
+    "name": "",
+    "id": "",
+    "verification_status": {
+      "resume": "accepted",
+      "transcript": "pending",
+      "recommendation_letters": "rejected"
+    },
+    "status": "accepted"
+  },
+]

@@ -19,3 +19,8 @@ mat-toolbar-row {
 .small-margin {
   margin: 5px;
 }
+
+#students-container {
+  width: 1250px;
+  margin: 20px auto;
+}

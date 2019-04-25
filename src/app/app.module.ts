@@ -12,7 +12,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { UserProgramsComponent } from './user-programs/user-programs.component';
-import { UserComponent } from './user/user.component';
+import { ApplicantComponent } from './applicant/applicant.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
@@ -26,7 +26,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { AdmissionsInterfaceComponent } from './admissions-interface/admissions-interface.component';
+import { AdmissionComponent } from './admission/admission.component';
 import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
@@ -36,19 +36,19 @@ import { MatDividerModule } from '@angular/material/divider';
     UserProfileComponent,
     ApplicatoinTrackerComponent,
     UserProgramsComponent,
-    UserComponent,
+    ApplicantComponent,
     HomeComponent,
-    AdmissionsInterfaceComponent
+    AdmissionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'applicants', component: UserComponent },
-      { path: 'admissions', component: AdmissionsInterfaceComponent },
+      { path: 'applicants', component: ApplicantComponent },
+      { path: 'admissions', component: AdmissionComponent },
       { path: 'program-finder', component: ProgramFinderComponent },
-      { path: 'user/:username', component: UserComponent }
+      { path: 'applicant/:username', component: ApplicantComponent }
     ]),
     BrowserAnimationsModule,
     MatToolbarModule,
