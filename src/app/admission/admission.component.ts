@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admission.component.css']
 })
 export class AdmissionComponent implements OnInit {
-  readonly logoPath = '../../assets/voyage-logo.png';
   constructor() { }
 
   ngOnInit() {

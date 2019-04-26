@@ -1,26 +1,13 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>
-      <img [src]="logoPath" id="logo" class="small-margin">
-      <span id="company-name" class="small-margin">Voyage</span>
-    </span>
-    <button mat-stroked-button routerLink="" class="log-out-btn small-margin">
-      Log Out
-    </button>
-  </mat-toolbar-row>
-</mat-toolbar>
-
 <mat-tab-group>
-  <mat-tab label="Pending">
+  <mat-tab label="My Applicants">
     <app-pending-applicants></app-pending-applicants>
   </mat-tab>
-  <mat-tab label="Accepted">
-
-  </mat-tab>
-  <mat-tab label="Rejected">
-
+  <mat-tab label="All Applicants">
+    <app-pending-applicants></app-pending-applicants>
   </mat-tab>
   <mat-tab label="Insights">
-
+    <div id="insights">
+      <img src="../../assets/applicants-data.png">
+    </div>
   </mat-tab>
 </mat-tab-group>

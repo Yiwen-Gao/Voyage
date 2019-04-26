@@ -7,7 +7,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./applicant.component.css']
 })
 export class ApplicantComponent implements OnInit {
-  readonly logoPath = '../../assets/voyage-logo.png';
   username: string;
 
   constructor(private route: ActivatedRoute) {}

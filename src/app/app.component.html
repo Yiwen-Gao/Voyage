@@ -1,21 +1,13 @@
-<!--<mat-toolbar color="primary">-->
-  <!--<mat-toolbar-row style="justify-content: space-between">-->
-    <!--<button mat-button routerLink="">-->
-      <!--{{ companyName }}-->
-    <!--</button>-->
-    <!--<p>-->
-      <!--<button mat-stroked-button [routerLink]="['program-finder']">-->
-        <!--Program Finder-->
-      <!--</button>-->
-      <!--<button mat-stroked-button [routerLink]="['applicant', username]" class="log-out-btn">-->
-        <!--<span class="applicant-icon">-->
-          <!--<i class="fas fa-applicant-circle"></i>-->
-        <!--</span>-->
-        <!--{{ username }}-->
-        <!--Log Out-->
-      <!--</button>-->
-    <!--</p>-->
-  <!--</mat-toolbar-row>-->
-<!--</mat-toolbar>-->
+<mat-toolbar *ngIf="showTopBar" color="primary">
+  <mat-toolbar-row>
+    <span>
+      <img [src]="logoPath" id="logo" class="small-margin">
+      <span id="company-name" class="small-margin">Voyage</span>
+    </span>
+    <button mat-stroked-button routerLink="" class="log-out-btn small-margin">
+      Log Out
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
 
 <router-outlet></router-outlet>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  companyName = 'VOYAGE';
-  username = 'Serena';
+  readonly logoPath = '../assets/voyage-logo.png';
+  showTopBar = false;
+  constructor(private router: Router) {
+    this.router.events.subscribe(() => {
+      this.onRouteChange();
+    });
+  }
+
+  onRouteChange(): void {
+    if (this.router.url === '/' || this.router.url === '') {
+      this.showTopBar = false;
+    }
+    else {
+      this.showTopBar = true;
+    }
+  }
 }

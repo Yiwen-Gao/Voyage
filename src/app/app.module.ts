@@ -50,7 +50,7 @@ import { PendingApplicantsComponent } from './pending-applicants/pending-applica
       { path: 'applicants', component: ApplicantComponent },
       { path: 'admissions', component: AdmissionComponent },
       { path: 'program-finder', component: ProgramFinderComponent },
-      { path: 'applicant/:username', component: ApplicantComponent }
+      { path: 'admissions/:applicant_id', component: ApplicantComponent }
     ]),
     BrowserAnimationsModule,
     MatToolbarModule,

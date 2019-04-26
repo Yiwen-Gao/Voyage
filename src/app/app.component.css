@@ -1,10 +1,21 @@
-.user-icon {
-  position: absolute;
-  font-size: 20px;
-  right: 70px;
+mat-toolbar-row {
+  justify-content: space-between;
+}
+
+#company-name {
+  font-family: 'Questrial', sans-serif;
+}
+
+#logo {
+  height: 30px;
+  border-radius: 5px;
+  vertical-align: middle;
 }
 
 .log-out-btn {
-  margin: 5px;
   border: 1px solid white;
+}
+
+.small-margin {
+  margin: 5px;
 }
