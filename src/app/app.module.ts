@@ -29,6 +29,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { AdmissionComponent } from './admission/admission.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { PendingApplicantsComponent } from './pending-applicants/pending-applicants.component';
+import { ProgramCustomizationComponent } from './program-customization/program-customization.component';
+import { ProgramCustomizationDialogComponent } from './program-customization/program-customization.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,9 @@ import { PendingApplicantsComponent } from './pending-applicants/pending-applica
     ApplicantComponent,
     HomeComponent,
     AdmissionComponent,
-    PendingApplicantsComponent
+    PendingApplicantsComponent,
+    ProgramCustomizationComponent,
+    ProgramCustomizationDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -69,9 +74,11 @@ import { PendingApplicantsComponent } from './pending-applicants/pending-applica
     MatSelectModule,
     MatProgressBarModule,
     MatTooltipModule,
-    MatDividerModule
+    MatDividerModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ProgramCustomizationComponent, ProgramCustomizationDialogComponent]
 })
 export class AppModule {}
