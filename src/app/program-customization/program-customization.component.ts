@@ -11,10 +11,9 @@ export class ProgramCustomizationDialogComponent {
     public dialogRef: MatDialogRef<ProgramCustomizationDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: string) {}
 
-  // onNoClick(): void {
-  //   this.dialogRef.close();
-  // }
-
+  closeDialog(): void {
+    this.dialogRef.close();
+  }
 }
 
 @Component({
@@ -23,7 +22,7 @@ export class ProgramCustomizationDialogComponent {
   styleUrls: ['./program-customization.component.css']
 })
 export class ProgramCustomizationComponent implements OnInit {
-  readonly questions = [
+  questions = [
     "Why do you want to attend Columbia?",
     "What interests do you have outside of your field of study?",
     "What will you contribute to the student community?",
@@ -36,9 +35,12 @@ export class ProgramCustomizationComponent implements OnInit {
 
   openDialog(): void {
     this.dialog.open(ProgramCustomizationDialogComponent, {
-      width: '250px',
+      width: '500px',
       data: ''
     });
   }
 
+  addQuestion(): void {
+    this.questions.push('');
+  }
 }

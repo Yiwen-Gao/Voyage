@@ -4,20 +4,16 @@
       Edit Your Supplementary Questions
     </div>
     <table class="full-width" cellspacing="0">
-      <tr *ngFor="let question of questions">
-        <td>
-          <mat-form-field class="full-width">
-            <input matInput placeholder="" [value]="question" />
-          </mat-form-field>
-        </td>
-        <td>
-          <button mat-icon-button color="primary">
-            <i class="material-icons" (click)="openDialog()">edit</i>
-          </button>
-        </td>
+      <tr *ngFor="let i = index; let question of questions">
+        <mat-form-field class="input-field">
+          <input matInput placeholder="Question {{i + 1}}" [value]="question" />
+        </mat-form-field>
+        <button mat-icon-button color="primary">
+          <i class="material-icons" (click)="openDialog()">edit</i>
+        </button>
       </tr>
     </table>
 
-    <button mat-raised-button color="primary">Add Question</button>
+    <button mat-raised-button color="primary" (click)="addQuestion()">Add Question</button>
   </form>
 </div>

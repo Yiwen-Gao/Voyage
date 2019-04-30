@@ -5,10 +5,18 @@
 }
 
 .form-header {
+  font-size: 24px;
   margin: 10px;
-
 }
 
 .full-width {
   width: 100%;
+}
+
+.input-field {
+  width: 90%;
+}
+
+button {
+  margin: 1%;
 }

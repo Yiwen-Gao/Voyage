@@ -1,34 +1,76 @@
 <style>
+  #close-btn {
+    float: right;
+  }
+
+  .edit-option {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+  }
+
   i {
     vertical-align: middle;
   }
 
+  .big {
+    font-size: 36px;
+  }
+
+  .medium {
+    font-size: 24px;
+  }
+
+  .medium-margin {
+    margin: 10px 0px;
+  }
+
   .small-margin {
-    margin: 10px;
+    margin: 5px 0px;
   }
 </style>
 
-<div>
-  <div class="small-margin">Question Type</div>
-  <br/>
-  <button mat-button>
-    <i class="material-icons">format_list_bulleted</i>Multiple Choice
+<button mat-icon-button id="close-btn" color="primary">
+  <i class="material-icons" (click)="closeDialog()">close</i>
+</button>
+<div class="big medium-margin">
+  Edit Question
+</div>
+<div class="edit-option">
+  <div class="medium">Question Type</div>
+  <button mat-stroked-button class="small-margin">
+    <i class="material-icons">format_list_bulleted</i>
+    Multiple Choice
   </button>
   <br/>
-  <button mat-button>
-    <i class="material-icons">check_circle</i>Checkboxes
+  <button mat-stroked-button class="small-margin">
+    <i class="material-icons">flip_to_back</i>
+    Single Textbox
   </button>
   <br/>
-  <button mat-button>
-    <i class="material-icons">arrow_drop_down_circle</i>Dropbox
+  <button mat-stroked-button class="small-margin">
+    <i class="material-icons">check_circle</i>
+    Checkboxes
   </button>
   <br/>
-  <button mat-button>
-    <i class="material-icons">flip_to_back</i>Single Textbook
+  <button mat-stroked-button class="small-margin">
+    <i class="material-icons">arrow_drop_down_circle</i>
+    Dropdown
   </button>
   <br/>
-  <button mat-button>
-    <i class="material-icons">toggle_on</i>Slider
+  <button mat-stroked-button class="small-margin">
+    <i class="material-icons">toggle_on</i>
+    Slider
   </button>
+</div>
+
+<div class="edit-option">
+  <div class="medium">Response Word Limit</div>
+  <mat-form-field>
+    <input matInput placeholder="Minimum" value="250">
+  </mat-form-field>
   <br/>
+  <mat-form-field>
+    <input matInput placeholder="Maximum" value="500">
+  </mat-form-field>
 </div>
