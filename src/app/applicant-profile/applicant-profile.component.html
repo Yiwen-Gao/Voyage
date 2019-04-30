@@ -32,19 +32,19 @@
         <tr>
           <td>
             <mat-form-field class="full-width">
-              <input matInput placeholder="FIRST NAME" value="Serena" />
+              <input matInput placeholder="First Name" value="Serena" />
             </mat-form-field>
           </td>
           <td>
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="LAST NAME" value="Li" />
+              <input matInput placeholder="Last Name" value="Li" />
             </mat-form-field>
           </td>
         </tr>
       </table>
 
       <mat-form-field>
-        <mat-label>GENDER</mat-label>
+        <mat-label>Gender</mat-label>
         <mat-select>
           <mat-option *ngFor="let gender of genders" [value]="gender">
             {{ gender }}
@@ -53,18 +53,15 @@
       </mat-form-field>
       <br />
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="PHONE NUMBER" value="(123) 456 7890" />
+        <input matInput placeholder="Phone Number" value="(123) 456-7890" />
       </mat-form-field>
 
       <p>
         <mat-form-field class="full-width">
-          <textarea matInput placeholder="ADDRESS">
-1600 Sample Pkwy
-APT 205
-          </textarea>
+          <input matInput placeholder="Address" value="1600 Sample Pkwy APT 205" />
         </mat-form-field>
         <mat-form-field class="full-width">
-          <textarea matInput placeholder="ADDRESS 2"></textarea>
+          <input matInput placeholder="Address 2" />
         </mat-form-field>
       </p>
 
@@ -72,12 +69,12 @@ APT 205
         <tr>
           <td>
             <mat-form-field class="full-width">
-              <input matInput placeholder="CITY" value="New York City" />
+              <input matInput placeholder="City" value="New York City" />
             </mat-form-field>
           </td>
           <td>
             <mat-form-field class="full-width">
-              <input matInput placeholder="STATE" value="NY" />
+              <input matInput placeholder="State" value="NY" />
             </mat-form-field>
           </td>
           <td>
@@ -86,7 +83,7 @@ APT 205
                 matInput
                 #postalCode
                 maxlength="5"
-                placeholder="POSTAL CODE"
+                placeholder="Postal Code"
                 value="94043"
               />
             </mat-form-field>
@@ -101,14 +98,14 @@ APT 205
         <tr>
           <td>
             <mat-form-field class="full-width">
-              <input matInput placeholder="COUNTRY" value="United State" />
+              <input matInput placeholder="Country" value="United State" />
             </mat-form-field>
           </td>
           <td>
             <mat-form-field class="full-width">
               <input
                 matInput
-                placeholder="SCHOOL NAME"
+                placeholder="Institution"
                 value="Columbia University"
               />
             </mat-form-field>
@@ -117,7 +114,7 @@ APT 205
             <mat-form-field class="example-full-width">
               <input
                 matInput
-                placeholder="PHONE NUMBER"
+                placeholder="Phone Number"
                 value="(212) 854-1754"
               />
             </mat-form-field>
@@ -127,10 +124,10 @@ APT 205
 
       <p>
         <mat-form-field class="full-width">
-          <input matInput placeholder="ADDRESS" value="116th St & Broadway" />
+          <input matInput placeholder="Address" value="116th St & Broadway" />
         </mat-form-field>
         <mat-form-field class="full-width">
-          <input matInput placeholder="ADDRESS 2" />
+          <input matInput placeholder="Address 2" />
         </mat-form-field>
       </p>
 
@@ -138,12 +135,12 @@ APT 205
         <tr>
           <td>
             <mat-form-field class="full-width">
-              <input matInput placeholder="CITY" value="New York City" />
+              <input matInput placeholder="City" value="New York City" />
             </mat-form-field>
           </td>
           <td>
             <mat-form-field class="full-width">
-              <input matInput placeholder="STATE" value="NY" />
+              <input matInput placeholder="State" value="NY" />
             </mat-form-field>
           </td>
           <td>
@@ -152,7 +149,7 @@ APT 205
                 matInput
                 #postalCode
                 maxlength="5"
-                placeholder="POSTAL CODE"
+                placeholder="Postal Code"
                 value="10027"
               />
             </mat-form-field>
@@ -164,15 +161,15 @@ APT 205
         <tr>
           <td>
             <mat-form-field class="full-width">
-              <input matInput placeholder="STARTING DATE" value="JUL-07-2014" />
+              <input matInput placeholder="Starting Date" value="Jul-07-2014" />
             </mat-form-field>
           </td>
           <td>
             <mat-form-field class="full-width">
               <input
                 matInput
-                placeholder="(EXPECTED) GRATUATE DATE"
-                value="MAY-07-2018"
+                placeholder="(Expected) Graduation Date"
+                value="May-07-2018"
               />
             </mat-form-field>
           </td>
@@ -180,12 +177,12 @@ APT 205
       </table>
 
       <mat-form-field class="full-width">
-        <input matInput placeholder="DEGREE TYPE" value="Bachelor of Science" />
+        <input matInput placeholder="Degree Type" value="Bachelor of Science" />
       </mat-form-field>
       <mat-form-field class="full-width">
         <input
           matInput
-          placeholder="MAJOR / FIELD OF STUDY"
+          placeholder="Major / Field of Study"
           value="Computer Science"
         />
       </mat-form-field>
@@ -198,7 +195,7 @@ APT 205
           </td>
           <td>
             <mat-form-field class="full-width">
-              <input matInput placeholder="GPA TYPE" value="US Standard" />
+              <input matInput placeholder="GPA Type" value="US Standard" />
             </mat-form-field>
           </td>
         </tr>
@@ -218,7 +215,7 @@ APT 205
       <br />
 
       <mat-form-field class="full-width">
-        <input matInput placeholder="TEST TYPE" value="GRE" />
+        <input matInput placeholder="Test Type" value="GRE" />
       </mat-form-field>
 
       <table class="full-width" cellspacing="0">
@@ -251,7 +248,7 @@ APT 205
     <!-- TRANSCRIPT -->
     <form class="form" *ngIf="group.value === 'transcript'">
       <div style="margin-left: 15px">
-        <p class="title">UPLOAD YOUR TRANSCRIPT</p>
+        <p class="title">Upload Your Transcript</p>
         <p>
           <span class="small-title">Transcript.pdf </span> Uploaded
           <span style="font-size: 13px; color: green;">
@@ -265,7 +262,7 @@ APT 205
     <!-- REQUIRED DOCUMENT FORM -->
     <form class="form" *ngIf="group.value === 'documents'">
       <div style="margin-left: 15px">
-        <p class="title">UPLOAD YOUR RESUME</p>
+        <p class="title">Upload Your Resume</p>
         <p>
           <span class="small-title">resume.pdf </span> Uploaded
           <span style="font-size: 13px; color: green;">
@@ -275,9 +272,9 @@ APT 205
         <button mat-stroked-button>Upload Another Resume</button>
       </div>
       <div style="margin-left: 15px; margin-top: 50px">
-        <p class="title">UPLOAD YOUR PERSONAL STATEMENT</p>
+        <p class="title">Upload Your Personal Statement</p>
         <p>
-          <span class="small-title">CV.pdf </span> Uploaded
+          <span class="small-title">CV.pdf</span> Uploaded
           <span style="font-size: 13px; color: green;">
             <i class="fas fa-check-circle"></i>
           </span>
@@ -289,15 +286,15 @@ APT 205
     <!-- EXPERIENCE FORM -->
     <form class="form" *ngIf="group.value === 'experience'">
       <mat-form-field class="full-width">
-        <input matInput placeholder="COUNTRY" value="United State" />
+        <input matInput placeholder="Country" value="United State" />
       </mat-form-field>
       <mat-form-field class="full-width">
-        <input matInput placeholder="COMPANY NAME" value="Facebook, Inc." />
+        <input matInput placeholder="Company Name" value="Facebook, Inc." />
       </mat-form-field>
       <mat-form-field class="full-width">
         <input
           matInput
-          placeholder="POSITION"
+          placeholder="Position"
           value="Software Engineer Summer Intern"
         />
       </mat-form-field>
@@ -305,12 +302,12 @@ APT 205
         <tr>
           <td>
             <mat-form-field class="full-width">
-              <input matInput placeholder="START DATE" value="JUN-07-2018" />
+              <input matInput placeholder="Start Date" value="Jun-07-2018" />
             </mat-form-field>
           </td>
           <td>
             <mat-form-field class="full-width">
-              <input matInput placeholder="END DATE" value="AUG-15-2018" />
+              <input matInput placeholder="End Date" value="Aug-15-2018" />
             </mat-form-field>
           </td>
         </tr>
@@ -325,19 +322,19 @@ APT 205
         <tr>
           <td>
             <mat-form-field style="width: 100px">
-              <input matInput placeholder="FIRST NAME" value="William" />
+              <input matInput placeholder="First Name" value="William" />
             </mat-form-field>
           </td>
           <td>
             <mat-form-field style="width: 100px">
-              <input matInput placeholder="LAST NAME" value="Wang" />
+              <input matInput placeholder="Last Name" value="Wang" />
             </mat-form-field>
           </td>
           <td>
             <mat-form-field>
               <input
                 matInput
-                placeholder="EMAIL"
+                placeholder="Email"
                 value="william.wang@columbia.edu"
               />
             </mat-form-field>
@@ -354,19 +351,19 @@ APT 205
         <tr>
           <td>
             <mat-form-field style="width: 100px">
-              <input matInput placeholder="FIRST NAME" value="Tom" />
+              <input matInput placeholder="First Name" value="Tom" />
             </mat-form-field>
           </td>
           <td>
             <mat-form-field style="width: 100px">
-              <input matInput placeholder="LAST NAME" value="Mitchell" />
+              <input matInput placeholder="Last Name" value="Mitchell" />
             </mat-form-field>
           </td>
           <td>
             <mat-form-field>
               <input
                 matInput
-                placeholder="EMAIL"
+                placeholder="Email"
                 value="tom.mitchell@columbia.edu"
               />
             </mat-form-field>
