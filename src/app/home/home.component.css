@@ -40,3 +40,11 @@ mat-form-field, input {
   border: 1px solid #3f51b5;
   color: #3f51b5;
 }
+
+.background {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+}

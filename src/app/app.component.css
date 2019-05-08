@@ -19,3 +19,8 @@ mat-toolbar-row {
 .small-margin {
   margin: 5px;
 }
+
+.background-image {
+  background-image: url("../assets/home-background.png");
+  background-size: 200px 200px;
+}
